@@ -5,5 +5,25 @@
  * Let's automate this process with control statements!
  */
 
-
 import "turns";
+
+function FillPotHoles(){
+	repeat (5){
+		move();
+		dropBeeper();
+		move();
+	}
+}
+
+function dropBeeper() {
+	if(rightIsClear()) {
+		turnRight();
+		move();
+		if(noBeepersPresent()) {
+			putBeeper();
+		}
+	}
+	turnAround();
+	move();
+	turnRight();
+}
