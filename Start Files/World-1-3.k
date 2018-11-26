@@ -8,7 +8,7 @@
 import "turns";
 
 function FillPotHoles(){
-	repeat (5){
+	while (frontIsClear()){
 		move();
 		dropBeeper();
 		move();
@@ -27,3 +27,4 @@ function dropBeeper() {
 	move();
 	turnRight();
 }
+
